@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web
+  name: conv-tem
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      app: conv-tem
   template:
     metadata:
       labels:
-        app: web
+        app: conv-tem
     spec:
       containers:
-      - name: web
+      - name: conv-tem
         image: guimap/conversao-temperatura:v1
         resources:
           limits:
@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web
+  name: conv-tem
 spec:
   selector:
-    app: web
+    app: conv-tem
   ports:
   - port: 80
     targetPort: 8080
