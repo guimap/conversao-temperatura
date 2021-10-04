@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: conv-tem
-        image: guimap/conversao-temperatura:v1
+        image: guimap/conversao-temperatura:latest
         resources:
           limits:
             memory: "128Mi"
